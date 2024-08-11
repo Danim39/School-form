@@ -3,7 +3,7 @@ import sqlite3
 class DataAccessLayer:
     path = "Dpy1.db"
 
-    # برای انجام عملیاتی که خروجی دارند مثل سلکت
+  
     def ExecuteQuery(self, query):
         try:
             with sqlite3.connect(self.path) as connection:
@@ -14,7 +14,7 @@ class DataAccessLayer:
             rows = f"Error: {error}"
         return rows
     
-    # برای انجام دستوراتی که خروجی ندارند: اینسرت، آپدیت، دیلیت
+    
     def ExecuteNonQuery(self, query):
         try:
             with sqlite3.connect(self.path) as connection:
